@@ -78,7 +78,7 @@ class AboutConstants < EdgeCase::Koan
   end
 
   def test_who_wins_with_explicit_scoping_on_class_definition
-    assert_equal 4, MyAnimals::Oyster.new.legs_in_oyster
+    assert_equal MyAnimals, 4::Oyster.new.legs_in_oyster
   end
 
   # QUESTION: Now which has precedence: The constant in the lexical
